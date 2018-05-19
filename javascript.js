@@ -1,12 +1,21 @@
-//Arrays
+//Function
 
-var todos = ['item1','item2','item3'];
-console.log('My todos:',todos);
+var todos = ['item 1','item 2','item 3'];
 
-// Add new todos
-todos.push('item 4');
-//change a todo
-todos [0] = 'item 1 updated';
-//delete todo
-todos.splice (0, 1); //delete item 1
-todos.splice (3, 1); //delete item 4
+//display todo with function
+function displayTodos(){
+    console.log('My todos:',todos);
+}
+
+//It should have a function to add todos.
+function addTodo(todo){
+    todos.push(todos);
+    displayTodos();
+}
+//change todos
+function changeTodo(postion, newValue){
+    todos[postion] = newValue;
+    displayTodos();
+}
+
+
