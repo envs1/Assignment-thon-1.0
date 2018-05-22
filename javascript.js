@@ -1,21 +1,22 @@
-//Function
+// Code goes here
 
-var todos = ['item 1','item 2','item 3'];
+// Made a change
 
-//display todo with function
-function displayTodos(){
-    console.log('My todos:',todos);
-}
-
-//It should have a function to add todos.
-function addTodo(todo){
-    todos.push(todos);
-    displayTodos();
-}
-//change todos
-function changeTodo(postion, newValue){
-    todos[postion] = newValue;
-    displayTodos();
-}
-
-
+var todoList ={
+  todos:['item 1','item 2','item 3'],
+  displayTodos:function(){
+    console.log('My Todos:',this.todos);
+  },
+  addTodo: function (todo){
+    this.todos.push(todo);
+    this.displayTodos();
+  },
+  changeTodo: function (position, newValue){
+    this.todos[position]=newValue;
+    this.displayTodos();
+  },
+  deleteTodo: function (position){
+    this.todos.splice(position,1);
+    this.displayTodos();
+  }
+};
